@@ -5,7 +5,7 @@ React 에서 렌더링 로직이 UI 로직과 연결되어 UI 관련 작업을 �
 
 ## JSX 표현식
 
-```JSX
+```javascript
 function formatName(user){
   return user.firstName + '' + user.lastName;
 }
@@ -27,26 +27,26 @@ JSX도 표현식이므로 자바스크립트 함수 호출이 되며 자바스�
 
 즉, JSXfmf if문, for문, switch 문 등 사용이 가능하며 변수에 할당하고 인자로 받아들이며 함수로 반환 가능
 
-### JSX 속성정의
+## JSX 속성정의
 어트리뷰트에 따옴표를 이용해 문자열 리터럴 정의 가능
 
-```JSX
+```javascript
 const element = <a href="https://www.reactjs.org">link</a>
 ```
  위와 같은 표현식을 어트리뷰트 타음표를 이용해 아래와 같이 사용가능
 
- ```JSX
+ ```javascript
  const elememt = <img src = {user.url}></img>
  ```
 
- ### JSX 자식정의
+ ## JSX 자식정의
  태그가 비어있다면 XML 처럼 ```/>```를 이용해 바로 닫아주여야 함
 
- ```JSX
+ ```javascript
  const element = <img src = {user.url} />
  ```
 
- ```JSX
+ ```javascript
  const element = (
     <div>
         <h1>Hello world</h1>
