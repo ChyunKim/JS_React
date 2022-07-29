@@ -12,3 +12,6 @@
 <br>
 
 ## 📖 학습내용 <br>
+
+- [std1-JSX](https://github.com/ChyunKim/JS_React/blob/main/week1/std1.md)
+- [std2 - Component](https://github.com/ChyunKim/JS_React/blob/main/week1/std2.md)
