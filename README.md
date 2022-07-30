@@ -15,4 +15,4 @@
 
 - [std1 - JSX](https://github.com/ChyunKim/JS_React/blob/main/week1/std1.md)
 - [std2 - Component](https://github.com/ChyunKim/JS_React/blob/main/week1/std2.md)
-- [std2 - state](https://github.com/ChyunKim/JS_React/blob/main/week1/std3.md)
+- [std3 - state](https://github.com/ChyunKim/JS_React/blob/main/week1/std3.md)
