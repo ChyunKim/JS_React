@@ -26,7 +26,7 @@ class MyComponent extends Comment {
     render() {
         return(
             <div>{number}
-                <button onclick {() => { this.setState({number:number+1})}>클릭</button>
+                <button onclick {() => { this.setState({number:number+1})}}>클릭</button>
             </div>
         )
     }
@@ -35,7 +35,26 @@ class MyComponent extends Comment {
 위의 constuctor는 생성자 함수로 작성시 반드시 ```super(props)``` 호출해야함<br>
 this.state값에 초기값을 설정<br><br>
 
-컴포넌트의 stste 는 객체 형식이어야 함<br><br>
+컴포넌트의 stste 는 객체 형식이어야 함<br>
+
+```javascript
+onClick = {()=> {
+    this.setState(number: number+1)
+    this.setState(number: this.state.number + 1)
+}}
+
+```
+위와 같이 number를 this.state를 두번 호출해도 state 값을 업데이트 할때는 상대가 비동기적으로 업데이트함<br>
+따라서 prevState를 사용하여 업데이트 하는 가정이 필요
+
+```javascript
+onClick = {()=> {
+    this.setState(prevState => ({
+        number: prevState.number+1
+    }))
+}}
+```
+
 
 ## 함수형 컴포넌트<br>
 
