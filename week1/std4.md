@@ -21,6 +21,8 @@ const App = () = {
 2. 이벤트에 실행할 자바스크립트 코드를 전달하는 것이아닌 함수 형태의 값을 전달<br>
 3. DOM 요소에만 이벤트 설정 가능<br><br>
 
+## 함수형 컴포넌트 이벤트 핸들링
+
 ```javascript
 const App () => {
     const [msg, setMsg] = React.useState('');             
@@ -51,6 +53,43 @@ const App = () => {
     )
 }
 ```
-input 값이 변경될 때마다 input값을 받아와서 계산하도록 가능<br>
+input 값이 변경될 때마다 input값을 받아와서 계산하도록 가능<br><br>
+
+## 클래스형 컴포넌트 이벤트 핸들링
+
+```javascript
+class Eventinput extends Component {
+    render() {
+        return (
+            <div>
+                <h1>Event Handling</h1>
+                <input type = "text" placeholder = "글자입력" onChange = {(e)=>{console.log(e)}} ></input>
+            </div>
+        )
+    }
+}
+```
+
+위와 같이 클래스형 컴포넌트로 표현가능하며 입력받은 input값을 alert 로 출력하는 표현을 아래와 같이 작성 가능<br>
+```javascript
+class Eventinput extends Component {
+    state = {
+        msg : ''
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Event Handling</h1>
+                <input type ="text" placeholder ="글자입력" onChange ={(e)=>this.setState(e.target.value)}/>
+                <button onClick ={alert(meg)}>클릭</button>
+            </div>
+        )
+    }
+}
+
+```
+
+위와 같이 클래스형 컴포넌트로도 이벤트 핸들링이 가능함<br>
 
 
