@@ -13,7 +13,7 @@ props와 state 모두 렌더링 결과물에 영향을 주는 정보를 갖고 �
 state는 클래스 컴포넌트가 가지고 있는 ```state```와 함수컴포넌트의 ```useState``` 함수를 통해 사용 가능<br>
 
 ## 클래스형 컴포넌트 State<br>
-클래스형 컴포넌트에서 state 사용법
+클래스형 컴포넌트에서 state 사용법<br>
 
 ```javascript
 class MyComponent extends Comment {
@@ -45,7 +45,7 @@ onClick = {()=> {
 
 ```
 위와 같이 number를 this.state를 두번 호출해도 state 값을 업데이트 할때는 상대가 비동기적으로 업데이트함<br>
-따라서 prevState를 사용하여 업데이트 하는 가정이 필요
+따라서 prevState를 사용하여 업데이트 하는 가정이 필요<br>
 
 ```javascript
 onClick = {()=> {
@@ -58,6 +58,20 @@ onClick = {()=> {
 
 ## 함수형 컴포넌트<br>
 
+**배열 비구조화 할당**
+```javascript
+const arr = [1,2]
+const one = arr[0]
+const two = arr[1]
+```
+위와 같이 어떤 변수에 배열에 요소들을 할당할때 비구조화 할당을 사용하면 한줄로 할당 가능<br><br>
+
+```javascript
+const [one, two] = arr;
+```
+위와 같이 할당이 가능
+
+위의 클래스로 표현한 state를 함수로 표현하면 아래와 같음<br>
 ```javascript
 const App = () => {
    const[value, setNum] = React.useState(2);
@@ -72,3 +86,20 @@ const App = () => {
 ```
 위와 같이 useState 를 사용하여 초기값을 지정할 수 있음<br>
 초기값 2를 가지고 +1 상태변경 하도록 가능<br>
+
+```javascript
+const App = () => {
+   const[value, setNum] = React.useState(2);
+
+  return (
+      <div>
+        {value}
+        <button onClick = {() => {
+            setNum(prev => prev+1)
+            setNum(prev => prev+1)
+        }}>클릭</button>
+      </div>
+  )
+}
+```
+함수형 컴포넌트 또한 비동기식으로 이루어지므로 위와 같이 prev로 표현 가능<br>
