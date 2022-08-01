@@ -19,3 +19,5 @@
 - [std4 - Event](https://github.com/ChyunKim/JS_React/blob/main/week1/std4.md)
 - [std5 - Ref](https://github.com/ChyunKim/JS_React/blob/main/week1/std5.md)
 - [std6 - Key](https://github.com/ChyunKim/JS_React/blob/main/week2/std6.md)
+- [std7 - LifeCycle](https://github.com/ChyunKim/JS_React/blob/main/week2/std7.md)
+- [std8 - Hooks](https://github.com/ChyunKim/JS_React/blob/main/week2/std8.md)
