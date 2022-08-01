@@ -18,3 +18,4 @@
 - [std3 - State](https://github.com/ChyunKim/JS_React/blob/main/week1/std3.md)
 - [std4 - Event](https://github.com/ChyunKim/JS_React/blob/main/week1/std4.md)
 - [std5 - Ref](https://github.com/ChyunKim/JS_React/blob/main/week1/std5.md)
+- [std6 - Key](https://github.com/ChyunKim/JS_React/blob/main/week2/std6.md)
