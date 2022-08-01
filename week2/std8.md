@@ -2,7 +2,7 @@
 Hooks는 리액트에 새로 도입된 기능으로 함수 컴포넌트에도 상태 관리를 할 수 있는 useState, <br>
 렌더링 직후 작업을 설정하는 useEffect 기능을 제공하여 기존의 함수 컴포넌트에서 할 수 없었던 다양한 작업을 제공함<br><br>
 
-## useState<<br>
+## useState<br>
 useState 가장 기본적인 Hook으로 함수 컴포넌트에서도 가변적인 상태를 지닐 수 있게 해줌<br>
 
 ```javascript
