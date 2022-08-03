@@ -49,8 +49,10 @@ const App = () => {
                 <input value = {pwd} ref = {focusPwd} type="text" name='password' placeholder='12글자 이상 20글자 이하' onChange={(e)=>{evtPwd(e)}}/>
                 {alertPwd}
             </div>
+            <div>
                 <button type="button" onClick={handleClick} disabled={!(id||pwd)}>회원가입</button>
             </div>
+        </div>
     ); 
 }
    
