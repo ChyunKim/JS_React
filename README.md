@@ -24,4 +24,4 @@
 <br>
 
 ## 📝 예제실습 <br>
-- [ex1 - 아이디 패스워드 유효성검사](https://github.com/ChyunKim/JS_React/blob/main/week2/EX1.md)
+- [ex1 - 아이디 패스워드 유효성검사](https://github.com/ChyunKim/JS_React/blob/main/week2/EX1.js)
