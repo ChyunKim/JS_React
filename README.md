@@ -21,3 +21,7 @@
 - [std6 - Key](https://github.com/ChyunKim/JS_React/blob/main/week2/std6.md)
 - [std7 - LifeCycle](https://github.com/ChyunKim/JS_React/blob/main/week2/std7.md)
 - [std8 - Hooks](https://github.com/ChyunKim/JS_React/blob/main/week2/std8.md)
+<br>
+
+## 📝 예제실습 <br>
+- [ex1 - 아이디 패스워드 유효성검사](https://github.com/ChyunKim/JS_React/blob/main/week2/EX1.md)
