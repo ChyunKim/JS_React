@@ -1,6 +1,6 @@
 # key
 리액트에서 key는 컴포넌트 배열을 렌더링 했을 때 어떤 원소에 변동이 있었는지 알아내려 함<br>
-key 가 없을 때는 virtual DOM<을 비교하는 과정에서 리스트를 순차적으로 비교하면서 변화 감지<br>
+key 가 없을 때는 virtual DOM을 비교하는 과정에서 리스트를 순차적으로 비교하면서 변화 감지<br>
 key 가 있다면 이 값을 사용하여 어떤 변화가 일어났는지 빠르게 알아낼 수 있음<br><br>
 
 ## Key 설정<br>
@@ -81,7 +81,7 @@ const ListFunc = () => {
     return(
         <div>
             <input value = {inputValue} type = "text" placeholder="글자입력" onChange={inputFunc}/>
-            <button onClick = {clickFunc}>추가</button>
+            <button type ="image" src ="./reset.png"onClick = {clickFunc}>추가</button>
             <ul>{nameList}</ul>
         </div>
     )
