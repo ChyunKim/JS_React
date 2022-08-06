@@ -34,10 +34,14 @@ const App = () => {
     }
 
     const handleClick = () => {
-        alertId !== '' && focusId.current.focus() || setId('')
-        alertPwd !== '' && focusPwd.current.focus() || setPwd('')
-        alertId === '' && alertPwd === '' && alert('회원가입 성공!');
-    };
+        if(alertId !== '') {
+            focusId.current.focus()
+            setId('')
+        }else if(alertPwd !== '') {
+            focusPwd.current.focus()
+            setPwd('')
+        }else alert('회원가입 성공!');
+    }
     
     return (
         <div>
