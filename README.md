@@ -26,3 +26,4 @@
 ## 📝 예제실습 <br>
 - [ex1 - 아이디 패스워드 유효성검사](https://github.com/ChyunKim/JS_React/blob/main/week2/EX1.js)
 - [ex2 - 확장성 있는 input 관리 ](https://github.com/ChyunKim/JS_React/blob/main/week2/EX2.js)
+- [ex3 - router 활용한 페이지 이동](https://github.com/ChyunKim/JS_React/blob/main/week3/EX3.js)

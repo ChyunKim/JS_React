@@ -54,7 +54,7 @@ const App = () => {
                 {alertPwd}
             </div>
             <div>
-                <button type="button" onClick={handleClick} disabled={!(id||pwd)}>회원가입</button>
+                <button type="button" onClick={handleClick} disabled={!(id&&pwd)}>회원가입</button>
             </div>
         </div>
     ); 
