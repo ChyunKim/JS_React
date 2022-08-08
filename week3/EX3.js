@@ -6,32 +6,28 @@
     3. 유효하지 않는 input 밑에 "유효하지 않은 ~~~입니다!" 출력
     4. id와 password가 둘다 비어있으면 회원가입 버튼 disable 처리
     5. 유효하지 않은 input이 존재하는 경우 회원가입 버튼 클릭시 에커 alert 띄어주고 해당 input reset 하고 focus
-    6. 모두 유효한 경우 회원가입 버튼 클릭시 "안녕하세요 {id}님! 이 적힌 페이지로 이동
-    ---
+    6. 모두 유효한 경우 회원가입 버튼 클릭시 "Hello!"  적힌 페이지로 이동
     7. 로그인 완료 페이지에는 input과 button 추가하여 input 입력하고 button 클릭하면 해당 내용 게시글 생성
     8. 게시글 클릭시 해당 게시글 datail 페이지로 이동 => 뒤로 가기 클릭시 기존에 작성된 글쓰기 페이지로 이동
 */
 
 import React from "react";
 import { useState } from "react";
-import { BrowserRouter, Route, Routes, Link, useParams,useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link, useParams } from "react-router-dom"
 
-const Post = () => {
-    const location = useLocation();
-    const value = location.state;
+const Post = ({list}) => {
+    const params = useParams();
     return (
       <>
-          Post :  {value}!
+          Post :  {list[params.id]}!
           <Link to = "/hello" ></Link>  
       </>
     )
     
 }
 
-const Hello = () => {
-    const params = useParams();
+const Hello = ({list,setList}) => {
     const [input, setInput] = React.useState('')
-    const [list, setList] = React.useState([])
 
     const eventClick = () => {
       if(input === '')  alert('게시물을 입력하세요')
@@ -43,12 +39,12 @@ const Hello = () => {
     }
     return (
       <>
-        Hello! {params.id}!
+        Hello!
         <br />
         <input value = {input} type="text" onChange={(e) => {setInput(e.target.value)}}></input>
         <button onClick={eventClick} >추가</button>
         <ul>
-            {list.map(item => <Link to = {{ pathname : `/post/:${list.indexOf(item)+1}`, state: {item} }} > <li key = {item} >{item}</li> </Link>)}
+            {list.map((item,index) => <Link key = {index} to = {`/post/${index}`} > <li>{item}</li> </Link>)}
         </ul>
       </>
     );
@@ -108,23 +104,23 @@ const Form = () => {
                 {alerpwd}
             </div>
             <div>
-                { !(alerid || alerpwd) ?  <Link to={`/hello/${id}`}><button type="button" onClick={handleClick} > 회원가입</button></Link> : <Link to = "/" ><button type="button" onClick={handleClick} disabled = {!(id&&password)}>회원가입</button></Link>  }
+                { !(alerid || alerpwd) ?  <Link to={`/hello`}><button type="button" onClick={handleClick} > 회원가입</button></Link> : <Link to = "/" ><button type="button" onClick={handleClick} disabled = {!(id&&password)}>회원가입</button></Link>  }
             </div>
         </div>
     ); 
 }
 
 const App = () => {
+  const [list, setList] = React.useState([]);
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Form />} />
-        <Route path="/hello/:id" element={<Hello />} />
-        <Route path="/post/:id" element={<Post />} />
+        <Route path="/hello" element={<Hello list = {list} setList={setList} />} />
+        <Route path="/post/:id" element={<Post list = {list} />} />
       </Routes>
     </BrowserRouter>
   );
 }
-
 
 export default App;
