@@ -21,7 +21,8 @@
 - [std6 - key](https://github.com/ChyunKim/JS_React/blob/main/week2/std6.md)
 - [std7 - LifeCycle](https://github.com/ChyunKim/JS_React/blob/main/week2/std7.md)
 - [std8 - Hooks](https://github.com/ChyunKim/JS_React/blob/main/week2/std8.md)
-- [std8 - react-router](https://github.com/ChyunKim/JS_React/blob/main/week3/std9.md)
+- [std9 - react-router](https://github.com/ChyunKim/JS_React/blob/main/week3/std9.md)
+- [std10 - css-in-js](https://github.com/ChyunKim/JS_React/blob/main/week3/std10.md)
 <br>
 
 ## 📝 예제실습 <br>
